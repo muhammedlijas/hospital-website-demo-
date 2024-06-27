@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sri.css">
+</head>
+
+    <body style="box-sizing: border-box">
+       
+        <div
+          id="uu"
+          style="
+            border: 2px solid black;
+    
+            height:500px;
+            width: 730px;
+            margin-left: 170px;
+            margin-bottom: 95px;
+    
+            background-image: url('https://t4.ftcdn.net/jpg/01/23/73/15/360_F_123731572_KMfBEkpbRlfQj1ypdPVwv4W0r27B9hVJ.jpg');
+          "
+        >
+        <h3 style="position: relative;top: 10px;left: 35px;">HOSPITAL REGISTRATION</h3><h3 style="position: relative;left:400px;bottom:30px;">PERSONAL INFORMATION</h3>
+          <form class="signup-form" id="signup-form">
+            <div class="tt">
+              <div class="one">
+                <label>Registered Under </label>
+                :<input type="radio" name="inst1" />DDU-GKY
+                <input type="radio" name="inst1" />PMKY<br />
+    
+                <label for="states">State </label>
+               : <select>
+                  <option value="state">select state</option>
+                  <option value="kerala">kerala</option>
+                  <option value="tamilnadu">tamilnadu</option>
+                  <option value="karnataka">karnataka</option>
+                  <option value="Andrapredesh">Andrapredesh</option>
+                  <option value="madhyapredesh">madhyapredesh</option></select
+                ><br />
+                <label for="district">District </label>
+                :<select>
+                  <option value="district">select district</option>
+                  <option value="palakad">palakad</option>
+                  <option value="trivandrum">trivandrum</option>
+                  <option value="malapuram">malapuram</option>
+                  <option value="kottayam">kottayam</option>
+                  <option value="eranamkulam">eranamkulam</option></select
+                ><br />
+                <label for="sub-district"> Sub-district </label>
+                :<select>
+                  <option value="sub-district">select sub-dist</option>
+                  <option value="perinthalmanna">perinthalmanna</option>
+                  <option value="kottakal">kottakal</option>
+                  <option value="tirur">tirur</option>
+                  <option value="valanchery">valanchery</option></select
+                ><br />
+                <label for="village">Village </label>
+    
+                :<select>
+                  <option value="village">select village</option>
+                  <option value="kadungapuram">kadungapuram</option>
+                  <option value="puzhakkattri">puzhakkattri</option>
+                  <option value="angadipuram">angadipuram</option>
+                  <option value="padaparamb">padaparamb</option></select
+                ><br />
+                <label for="">Candidate Name </label>
+                :<input
+                  type="text"
+                  name="cname"
+                  placeholder="candidate name"
+                /><br />
+    
+                <label for="">Guardian's Name </label>
+                :<input
+                  type="text"
+                  name="gname"
+                  placeholder="guardian's name"
+                /><br />
+              </div>
+    
+              <div class="two">
+                <label for="">E-mail </label>
+                :<input type="email" name="email" placeholder="@gmail.com" /><br />
+    
+                <label for="">Date Of Birth</label>
+                :<input type="date" name="dob" placeholder="DOB" /><br />
+    
+                <label>category :</label>
+                <input type="radio" name="inst" />SC
+                <input type="radio" name="inst" />ST
+                <input type="radio" name="inst" />OBC<br />
+    
+                <label>Mobile Number </label>
+                :<input name="number" type="number" placeholder="+91-" /><br />
+                <label for="">Guardian's Number </label>
+                :<input name="number" type="number" placeholder="+91-" /><br />
+              </div>
+            </div>
+    
+            <input type="checkbox" style="margin-left: 50%;">
+            <label for="accept all the terms and codition"
+              >accept all the terms and condition</label
+            ><br />
+            <input
+              style="background-color: rgb(111, 188, 229); font-weight: bolder"
+              type="submit"
+            />
+          </form>
+        </div>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
+        <style>
+          label.error {
+            color: red;
+            font-size: 10px;
+    
+            display: block;
+            height: 15px;
+            width: 100px;
+            padding: 0;
+            margin: 0;
+          }
+          input,
+          select {
+            margin: 9px 0;
+          }
+        </style>
+        <script>
+          $(document).ready(function () {
+            $("#signup-form").validate({
+              rules: {
+                cname: {
+                  required: true,
+                  minlength: 4,
+                  maxlength: 5,
+                },
+                gname: {
+                  required: true,
+                  minlength: 4,
+                  maxlength: 5,
+                },
+                email: {
+                  required: true,
+                  email: true,
+                },
+                dob: {
+                  required: true,
+                },
+                number: {
+                  required: true,
+                  maxlength: 10,
+                  minlength: 10,
+                },
+              },
+              messages: {
+                cname: {
+                  required: "🚨cname is required  ",
+                  minlength: "🚨must have 4 char ",
+                  maxlength: "🚨maxlen 5  ",
+                },
+                gname: {
+                  required: "🚨gname is required  ",
+                  minlength: "🚨must have 4 char ",
+                  maxlength: "🚨maxlen 5 ",
+                },
+                email: {
+                  required: "🚨email required",
+                  email: "🚨valid email required",
+                },
+                dob: {
+                  required: "🚨enter DOB",
+                },
+                number: {
+                  required: "🚨enter your number",
+                  maxlength: "🚨max 10 number",
+                  minlength: "🚨enter atleast 10 number",
+                },
+              },
+            });
+          });
+        </script>
+        <script>
+          $(document).ready(function () {
+            $("#bu").click(function () {
+              $("#uu").slideToggle(1000);
+            });
+          });
+        </script>
+      
+    
+    
+    
+</body>
+</html>

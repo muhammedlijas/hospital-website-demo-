@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body onload="cap()" >
+    <div style="border: 2px solid black; width:350px;height:400px;position: relative;left:400px;top:150px;background-color: aqua;">
+    <h1 style="text-align: center;"><u>LOGIN</u></h1>
+    <form  style="text-align: center;" action="" name="form1" onsubmit="return validation()">
+        
+        <label style="font-size: small;" for="fname">E-MAIL:</label>
+        <input type="email" id="fname"name="fname" ><br><br>
+        <label style="font-size: small;" for="pwd">PASSWORD:</label>
+        <input type="text" id="pwd"name="password" ><br><br>
+        
+
+<input style="width:200px;height:45px;border: 2px solid lightgreen;text-align: center;font-size: x-large;" type="text" id= "capt"readonly><br><br>
+<label style="font-size:small;">TYPE THE CHARECTER ABOVE :</label>
+<input style="width: 40px;" type="text" id= "textinput">
+<img style="height:30px;position: relative;bottom:55px;left:20px;" src="refresh.png"  onclick="cap()"></h6>
+<input  type="submit" value="login"><br><br>
+</div>
+        
+    </form>
+    <script>
+         function cap()
+    {
+        var alpha=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0',
+        '@','#','$','%','^','&','*'];
+        var a=alpha[Math.floor(Math.random()*43)];
+        var b=alpha[Math.floor(Math.random()*43)];
+        var c=alpha[Math.floor(Math.random()*43)];
+        var d=alpha[Math.floor(Math.random()*43)];
+        var final=a+b+c+d;
+        document.getElementById("capt").value=final;                                                                                                     
+
+    }
+        function validation(){
+            var email=document.getElementById("fname");
+            var password=document.getElementById("pwd");
+            
+        var str1=document.getElementById("capt").value;
+        var str2=document.getElementById("textinput").value;
+            if(email.value==""){
+                alert("must input your email");
+                document.form1.fname.focus();
+                return false;
+            }
+            if(password.value==""){
+                alert("must input your password");
+                document.form1.pwd.focus();
+                return false;
+
+        }
+        if(str1==str2){
+            alert("INVALID CAPTCHA");
+           
+            return true;
+        
+        }
+        if(str1!=str2){
+            alert("REGISTRTN DONE");
+
+            return true;
+        }
+        return false;
+        
+
+        
+    }
+
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+.tt{
+    display: flex;
+    padding-left: 5%;
+    
+ }
+ .two{
+     margin-left: 100px;
+ }
+ #bu{
+     width: 730px;
+     margin-right: 5px;
+     height: 39px;
+     font-size: medium;
+     font-weight: bolder;
+     color: white;
+     background-color: rgb(131, 224, 238);
+     
+ 
+ }

@@ -1,0 +1,23 @@
+.cn{
+    height: 100px;
+    width:80px;
+    position: relative;
+    top: 100px;
+    left: 200px;
+
+
+}
+.cd{
+    position: relative;
+    top: 100px;
+    left: 260px;
+    height: 100px;
+    width:80px;
+
+
+}
+.mar{
+    background-color:rgb(48, 187, 205) ;
+    height: 800px;
+    margin-top: 30px;
+}
